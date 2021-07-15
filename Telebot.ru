@@ -17,24 +17,7 @@ def catalog_keyboard():
     rmd = types.KeyboardButton(text="/rmd")
     keyboard.add(id, name, help, photo, rmd)
     return keyboard
-def catalog_keyboard2():
-    keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-    id = types.KeyboardButton(text="1")
-    name = types.KeyboardButton(text="2")
-    help = types.KeyboardButton(text="3")
-    photo = types.KeyboardButton(text="4")
-    rmd = types.KeyboardButton(text="5")
-    hi = types.KeyboardButton(text="6")
-    hi1 = types.KeyboardButton(text="7")
-    hi2 = types.KeyboardButton(text="8")
-    hi3 = types.KeyboardButton(text="9")
-    hi4 = types.KeyboardButton(text="0")
-    keyboard.row(id, name, help)
-    keyboard.row(photo, rmd, hi)
-    keyboard.row(hi1, hi2, hi3)
-    keyboard.row(hi4)
-   
-    return keyboard
+    
 
 
 bot = telebot.TeleBot("1757067302:AAGbJbtBqrbtJIz2Oj8F_lfkSpyOsSTc8rY")
@@ -44,7 +27,7 @@ def echo_all(message):
     if message.text == "/start":
            bot.send_message(message.chat.id, "Привет, я бот, который поможет тебе найти информацию!", reply_markup=catalog_keyboard())
     elif message.text == "/id":
-        bot.reply_to(message, message.chat.id, reply_markup=catalog_keyboard2())
+        bot.reply_to(message, message.chat.id)
     elif message.text == "/name":
         bot.reply_to(message, message.chat.first_name)
     elif message.text == "Помощь" or message.text == "помощь":
