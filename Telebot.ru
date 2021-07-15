@@ -20,7 +20,7 @@ def catalog_keyboard():
     
 
 
-bot = telebot.TeleBot("1757067302:AAGbJbtBqrbtJIz2Oj8F_lfkSpyOsSTc8rY")
+bot = telebot.TeleBot("BOT_KEY")
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
