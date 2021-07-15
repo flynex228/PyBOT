@@ -43,7 +43,7 @@ def catalog_keyboard2():
     return keyboard
 
 
-bot = telebot.TeleBot("1757067302:AAGbJbtBqrbtJIz2Oj8F_lfkSpyOsSTc8rY")
+bot = telebot.TeleBot("BOT_KEY")
 lv = 0
 
 @bot.message_handler(func=lambda message: True)
